@@ -8,8 +8,6 @@ This study explores the development of models using two configurations:
 - **Baseline:** Excludes derived variables, such as linear velocities, angular velocities, and accelerations, to analyze performance without temporal dependencies.
 - **Full:** Includes all available state variables, emphasizing the importance of derived variables in capturing the temporal dynamics of the maneuver.
 
-Synthetic data generated with a VAE enhances the robustness of the models. A fine-tuning process using a centered moving average with a window size of 10 frames was applied to smooth the synthetic trajectories, ensuring closer alignment with real flight data.
-
 ## Project Structure
 
 ### Main Files
