@@ -1,6 +1,6 @@
 # Autonomous Aircraft Tactical Pop-Up Attack Using Imitation and Generative Learning
 
-This repository contains the implementation of models developed for predicting aircraft control inputs during pop-up attack maneuvers in air combat scenarios. The methodology combines imitation learning techniques and generative learning to train and evaluate models using real flight data from the Brazilian Air Force and synthetic data generated with a Variational Autoencoder (VAE).
+This repository contains the implementation of models developed for predicting aircraft control inputs during pop-up attack maneuvers in air combat scenarios. The methodology combines imitation learning techniques and generative learning to train and evaluate models using flight data from a high-fidelity flight simulator and synthetic data generated with a Variational Autoencoder (VAE).
 
 ## Project Overview
 
