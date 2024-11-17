@@ -33,18 +33,29 @@ This study explores the development of models using two configurations:
 
 1. **Exploratory Data Analysis (EDA):**
    - Open `eda.ipynb` and run all cells to explore and visualize the flight data.
+   - This step provides insights into the characteristics of the original flight data and prepares it for further processing.
 
-2. **Training Imitation Learning Models:**
+2. **Train Baseline and Full Models:**
    - Choose a model type (MLP, LSTM, GRU) and a configuration (baseline or full).
-   - Open the corresponding notebook (e.g., `mlp-baseline.ipynb` for baseline MLP or `lstm-full-augmented.ipynb` for full LSTM with augmented data).
-   - Run all cells to preprocess data, train the model, and evaluate its performance.
+   - Open the corresponding notebook (e.g., `mlp-baseline.ipynb` for baseline MLP or `lstm-full.ipynb` for full LSTM).
+   - Run all cells to preprocess the data, train the model, and evaluate its performance for both baseline and full configurations.
 
-3. **Generating Synthetic Data:**
+3. **Generate Synthetic Data:**
    - Open `vae.ipynb`.
-   - Train the VAE model on the adjusted flight data and generate synthetic data.
+   - Train the VAE model on the adjusted flight data and generate synthetic flight data.
+   - Save the generated data in the appropriate `generated_flights_[X]/` directory, based on the number of synthetic flights generated.
+   - The synthetic data is automatically smoothed using a centered moving average with a window size of 10 frames.
+   - The smoothed data is saved in the corresponding `smoothed_flights_[X]/` directories.
 
-4. **Evaluate Results:**
-   - Check the `metrics/` directory for evaluation results and `plots/` for visual comparisons.
+4. **Train Models with Augmented Data:**
+   - Open the augmented training notebooks (e.g., `mlp-baseline-augmented.ipynb`, `lstm-full-augmented.ipynb`).
+   - Train the models using the combined dataset (original + smoothed synthetic data).
+   - Evaluate the models and compare performance with the baseline and full configurations.
+
+5. **Evaluate Results:**
+   - Check the `metrics/` directory for CSV files containing evaluation results such as RMSE, R², training time, and inference time.
+   - Open the `plots/` directory for visual comparisons, including training and validation loss curves and predicted versus actual trajectories.
+
 
 ## Requirements
 
